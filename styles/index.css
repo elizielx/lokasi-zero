@@ -1,188 +1,376 @@
+/* Udah lama banget gak nulis CSS biasa, gw biasa pake Tailwind CSS sekarang wkwkw */
+
+/* --------------------------------- GLOBAL --------------------------------- */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
 html,
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 16px;
 }
 
-.wrapper {
-  padding-right: 8px;
-  padding-left: 8px;
+/* ------------------------------- NAVIGATION ------------------------------- */
+
+.navigation {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 64rem;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    overflow: hidden;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: #010101;
+    text-decoration: none;
 }
 
-/* html,
-body {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 16px;
+.navigation-brand {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+    color: #010101;
+    text-decoration: none;
 }
 
-.wrapper {
-  padding-left: 18px;
-  padding-right: 18px;
+.navigation-brand h2 {
+    display: none;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 700;
 }
 
-nav a {
-  text-decoration: none;
-  color: #000;
+.navigation-brand h2 span {
+    letter-spacing: -1px;
 }
 
-nav a:hover {
-  color: #398be3;
-  transition: color 0.3s ease;
+.navigation-brand a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
-.main .hero {
-  padding-top: 44px;
-  padding-bottom: 44px;
+.navigation-items {
+    align-items: center;
+    flex: 1 1 0%;
+    max-width: max-content;
+    display: flex;
+    z-index: 10;
 }
 
-.main .hero h2 {
-  font-size: 44px;
-  font-weight: 700;
-  text-align: center;
+.navigation-items ul {
+    gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    flex: 1 1 0%;
+    display: flex;
 }
 
-.main .hero p {
-  font-size: 18px;
-  font-weight: 300;
-  text-align: center;
+.navigation-items ul,
+ol,
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.navigation-items ul li a {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    border-radius: 0.375rem;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: 2.5rem;
+    display: inline-flex;
+    color: inherit;
+    text-decoration: inherit;
+
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.navigation-items ul li a:hover {
+    background-color: #f1f1f1;
+    border: 1px solid #bebebe;
+}
+
+/* ---------------------------------- MAIN ---------------------------------- */
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 64rem;
+}
+
+main .container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    max-width: 64rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+main .container:nth-child(2) {
+    padding-top: 24px;
+    justify-content: flex-start;
+    justify-content: start;
+}
+
+main header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 0.875rem;
+}
+
+main header h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 4.25rem;
+    margin: 0;
+}
+
+main header h1 span {
+    color: #f9423a;
+    font-weight: 600;
+    font-style: italic;
+}
+
+main header h1 .highlight {
+    background-color: #f9423a;
+    color: #ffffff;
+    padding: 0.1rem 0.25rem;
+}
+
+main header div {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+main header div p {
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    max-width: 64rem;
+}
+
+main header .call-to-action {
+    margin-top: 0.5rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* -------------------------------- SHOWCASE -------------------------------- */
+
+.showcase {
+    display: none;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.showcase figure {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.showcase img {
+    width: 100%;
+    height: 400px;
+    border-radius: 0.375rem;
+}
+
+/* --------------------------------- BUTTONS -------------------------------- */
 .button {
-  justify-content: center;
-  white-space: nowrap;
-  font-weight: 500;
-  outline: none;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #000;
-  height: 1.5rem;
-  padding: 1.255rem;
-  font-size: 1rem;
-  transition: transform 300ms ease-in-out, box-shadow 300ms ease-in-out;
+    display: inline-flex;
+    justify-content: center;
+    white-space: nowrap;
+    font-weight: 500;
+    gap: 0.25rem;
+    align-items: center;
+    padding: 1.25rem;
+    margin: 0;
+    text-decoration: none;
+    border-radius: 0.375rem;
 }
 
-.group {
-  display: inline-flex;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #f0e9d5;
-  height: 1.5rem;
-  width: max-content;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.375rem;
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: normal;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.button-solid {
+    color: #f1f1f1;
+    background-color: #f9423a;
+    border: 1px solid #fff;
+    height: 2.5rem;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.3s;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+        transform, filter, backdrop-filter, -webkit-backdrop-filter;
 }
 
-.group:hover {
-  background-color: #f0f4f8;
-  color: #000;
+.button-solid:hover {
+    transform: translate(0, 0) rotate(0) skew(0) skewY(0) scaleX(1.05) scaleY(1.05);
 }
 
-.group:focus {
-  background-color: #f0f4f8;
-  color: #000;
-  outline: none;
+.button-outline {
+    color: #f9423a;
+    background-color: transparent;
+    border: 1px solid #f9423a;
+    height: 2.5rem;
 }
 
-.group:disabled {
-  pointer-events: none;
-  opacity: 0.5;
+.button-solid-white {
+    color: #010101;
+    background-color: #f8f8f8;
+    border: 1px solid #bebebe;
+    height: 2.5rem;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.3s;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
+        transform, filter, backdrop-filter, -webkit-backdrop-filter;
 }
 
-[data-active="true"] .group {
-  background-color: #f0f4f8;
+.button-solid-white:hover {
+    background-color: #f1f1f1;
+    transform: translate(0, 0) rotate(0) skew(0) skewY(0) scaleX(1.05) scaleY(1.05);
 }
 
-[data-state="open"] .group {
-  background-color: #f0f4f8;
+/* -------------------------- NEW WINDOW ARROW ICON ------------------------- */
+/* source: https://codepen.io/Bets/pen/KGBqqb */
+
+.newWindow {
+    display: inline-block;
+    margin-left: 5px;
+    position: relative;
+    border: 1px solid #f1f1f1;
+    width: 8px;
+    height: 8px;
 }
 
-.dark .group {
-  background-color: #000;
-  color: #fff;
+.newWindow:after {
+    position: absolute;
+    top: -8px;
+    right: -2px;
+    font-size: 0.8em;
+    content: "\1f855";
+    color: #f1f1f1;
 }
 
-.dark .group:hover {
-  background-color: #333;
-  color: #e5e7eb;
+.newWindow:before {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    content: " ";
+    border: 4px solid #f9423a;
 }
 
-.dark .group:focus {
-  background-color: #333;
-  color: #e5e7eb;
+/* ----------------------------------- HR ----------------------------------- */
+hr {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #727d92;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-[data-active="true"].dark .group {
-  background-color: #333;
+/* ------------------------------- MEDIA QUERY ------------------------------ */
+
+/* sm */
+@media (min-width: 640px) {
+    .navigation-items {
+        justify-content: center;
+    }
 }
 
-[data-state="open"].dark .group {
-  background-color: #333;
+/* md */
+@media (min-width: 768px) {
+    main .container {
+        flex-direction: row;
+    }
+
+    main header {
+        max-width: 48rem;
+    }
+    main header h1 {
+        line-height: 1.625;
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+    main header .call-to-action {
+        flex-direction: row;
+    }
 }
 
-.button:hover {
-  background-color: #000;
-  color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: scale(1.05);
+/* lg */
+@media (min-width: 1024px) {
+    .navigation {
+        justify-content: space-between;
+    }
+    .navigation-brand {
+        display: flex;
+    }
+    .navigation-brand h2 {
+        display: block;
+    }
+    .navigation-items {
+        right: 0.25rem;
+    }
+    main header h1 {
+        font-size: 2.45rem;
+        line-height: 1.3;
+    }
+    main header .call-to-action {
+        flex-direction: row;
+    }
+    .showcase {
+        display: flex;
+    }
 }
 
-.button:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: 2px;
-}
+/* xl */
+@media (min-width: 1280px) {
+    .navigation {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-.button:disabled {
-  pointer-events: none;
-  opacity: 0.5;
-}
+    main {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-.dark .button {
-  border-color: #000;
+    main .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
-
-.dark .button:hover {
-  background-color: #000;
-  background: rgba(0, 0, 0, 0.9);
-  color: #e5e7eb;
-}
-
-.dark .button:focus-visible {
-  outline-color: #2d3748;
-  outline-offset: 2px;
-}
-.button:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-.logo {
-  flex: 1;
-}
-
-.nav-items {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.buttons {
-  flex: 1;
-  text-align: right;
-} */
