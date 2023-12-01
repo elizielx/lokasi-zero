@@ -306,6 +306,8 @@ main header .call-to-action {
     max-width: 64rem;
 }
 
+/* --------------------------- PRODUCT AND SOLUSI --------------------------- */
+
 .card-items {
     display: flex;
     flex-wrap: wrap;
@@ -356,10 +358,6 @@ main header .call-to-action {
 .light-mode .card-items .card p {
     color: #333;
 }
-
-/* .dark-mode .card-items .card {
-    background-color: #404040;
-} */
 
 /* ------------------------------- KONSULTASI ------------------------------- */
 
