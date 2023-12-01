@@ -43,12 +43,28 @@ body {
     text-decoration: none;
 }
 
+.navigation.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.light-mode .navigation.sticky {
+    background-color: #fff;
+}
+
+.dark-mode .navigation.sticky {
+    background-color: #202020;
+}
+
 .navigation-brand {
     display: none;
     align-items: center;
     gap: 2rem;
     color: #010101;
     text-decoration: none;
+    padding-left: 2rem;
 }
 
 .navigation-brand h2 {
@@ -80,6 +96,7 @@ body {
     flex: 1 1 0%;
     max-width: max-content;
     display: flex;
+    padding-right: 2rem;
     z-index: 10;
 }
 
@@ -108,6 +125,7 @@ menu {
     padding-bottom: 0.5rem;
     padding-right: 1rem;
     padding-left: 1rem;
+    z-index: 1000;
     border-radius: 0.375rem;
     justify-content: center;
     align-items: center;
@@ -174,11 +192,11 @@ main .container:nth-child(3) {
 
 main .container:nth-child(4) {
     padding-top: 64px;
-    justify-content: flex-start;
-    justify-content: start;
+    justify-content: center;
+    justify-content: center;
 }
 
-main .container:nth-child(4) {
+main .container:nth-child(5) {
     padding-top: 64px;
     justify-content: flex-start;
     justify-content: start;
@@ -288,6 +306,10 @@ main header .call-to-action {
     max-width: 64rem;
 }
 
+/* #produk-solusi {
+    background-color: red;
+} */
+
 .card-items {
     display: flex;
     flex-wrap: wrap;
@@ -313,6 +335,14 @@ main header .call-to-action {
     width: 50px;
 }
 
+.dark-mode .card-items .card figure img {
+    /* 
+    * Make a image color into white on a dark-mode.
+    ! Make sure the img is a JPG/PNG.
+    */
+    filter: brightness(0) invert(1);
+}
+
 .card-items .card h3 {
     font-size: 1rem;
     text-align: left;
@@ -331,9 +361,9 @@ main header .call-to-action {
     color: #333;
 }
 
-.dark-mode .card-items .card {
+/* .dark-mode .card-items .card {
     background-color: #404040;
-}
+} */
 
 /* ------------------------------- KONSULTASI ------------------------------- */
 
@@ -350,7 +380,7 @@ main header .call-to-action {
 }
 
 .dark-mode .konsultasi {
-    background-color: #404040;
+    background-color: #282824;
     border: 1px solid #808080;
 }
 
@@ -392,7 +422,7 @@ footer {
 }
 
 .dark-mode footer {
-    background-color: #404040;
+    background-color: #282824;
     border-top: 1px solid #808080;
 }
 
