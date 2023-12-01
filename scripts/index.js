@@ -1,4 +1,4 @@
-// orang typescript bang
+// orang typescript (elitist) bang
 
 document.addEventListener("DOMContentLoaded", function () {
     const wrapper = document.querySelector(".wrapper");
