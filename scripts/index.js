@@ -22,14 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
         wrapper.classList.add("light-mode");
     }
 
-    // listen for scroll down and make nav sticky
-    window.addEventListener("scroll", handleScroll);
-
     // toggle dark mode / light mode
     toggleButton.addEventListener("click", function () {
         wrapper.classList.toggle("dark-mode");
         wrapper.classList.toggle("light-mode");
     });
+
+    window.addEventListener("scroll", handleScroll);
 
     // smooth scroll anchor
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
