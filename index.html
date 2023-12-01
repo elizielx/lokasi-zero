@@ -1,4 +1,4 @@
-<!-- bisa karena bisa 👍 -->
+<!-- orang jsx bang -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,6 +13,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="styles/index.css" />
+        <script src="scripts/index.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -23,9 +24,8 @@
                 </a>
                 <nav class="navigation-items">
                     <ul>
-                        <li class="navigation-item"><a href="#">Beranda</a></li>
-                        <li class="navigation-item"><a href="#">Produk & Solusi</a></li>
-                        <li class="navigation-item"><a href="#">Konsultasi</a></li>
+                        <li class="navigation-item"><a href="#produk-solusi">Produk & Solusi</a></li>
+                        <li class="navigation-item"><a href="#konsultasi">Konsultasi</a></li>
                     </ul>
                 </nav>
             </div>
@@ -82,24 +82,109 @@
                         </div>
                     </article>
                 </div>
-                <div class="container">
+                <div class="container" id="produk-solusi">
+                    <div class="card-items">
+                        <article class="card">
+                            <figure>
+                                <img src="./images/cards/guardianshield.png" alt="Image 1" />
+                            </figure>
+                            <h3>GuardianShield Pro</h3>
+                            <p>
+                                GuardianShield Pro adalah solusi keamanan siber tingkat lanjut dari Lokasi Zero. Dengan
+                                fitur-fitur canggih seperti AI-driven threat detection dan enkripsi data yang
+                                ditingkatkan, GuardianShield Pro memberikan perlindungan ekstra terhadap ancaman siber
+                                terbaru.
+                            </p>
+                        </article>
+                        <article class="card">
+                            <figure>
+                                <img src="./images/cards/zero-threat.png" alt="Image 1" />
+                            </figure>
+                            <h3>Lokasi Zero Threat Intelligence</h3>
+                            <p>
+                                Manfaatkan keahlian Lokasi Zero dengan layanan Threat Intelligence kami. Dapatkan
+                                wawasan mendalam tentang ancaman siber yang sedang berkembang dan rekomendasi proaktif
+                                untuk menjaga keamanan perusahaan Anda selalu satu langkah di depan.
+                            </p>
+                        </article>
+                        <article class="card">
+                            <figure>
+                                <img src="./images/cards/zeroday.png" alt="Image 1" />
+                            </figure>
+                            <h3>ZeroDay Defender</h3>
+                            <p>
+                                ZeroDay Defender, produk andalan Lokasi Zero, memberikan perlindungan terhadap serangan
+                                Zero-Day yang sangat merugikan. Keamanan tingkat tinggi untuk mengamankan sistem Anda
+                                dari kerentanannya terhadap serangan tanpa tanda.
+                            </p>
+                        </article>
+                        <article class="card">
+                            <figure>
+                                <img src="./images/cards/consult.png" alt="Image 1" />
+                            </figure>
+                            <h3>Konsultasi Keamanan Siber</h3>
+                            <p>
+                                Dengan tim ahli kami, Lokasi Zero menawarkan layanan konsultasi keamanan siber yang
+                                disesuaikan dengan kebutuhan perusahaan Anda. Dapatkan strategi dan rencana aksi yang
+                                efektif untuk mengatasi risiko keamanan digital.
+                            </p>
+                        </article>
+                        <article class="card">
+                            <figure>
+                                <img src="./images/cards/paket.png" alt="Image 1" />
+                            </figure>
+                            <h3>Paket Keamanan All-In-One</h3>
+                            <p>
+                                Pilih Paket Keamanan All-In-One dari Lokasi Zero untuk solusi lengkap. Termasuk
+                                GuardianShield, Threat Intelligence, dan layanan konsultasi, paket ini memberikan
+                                perlindungan menyeluruh untuk bisnis Anda.
+                            </p>
+                        </article>
+                        <article class="card">
+                            <figure>
+                                <img src="./images/cards/training.png" alt="Image 1" />
+                            </figure>
+                            <h3>Pelatihan Keamanan Karyawan</h3>
+                            <p>
+                                Lokasi Zero membantu memperkuat lapisan manusia dalam keamanan siber dengan pelatihan
+                                karyawan yang berfokus pada kesadaran keamanan. Kurangi risiko serangan phishing dan
+                                tingkatkan kesadaran keamanan di seluruh organisasi Anda.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="container" id="konsultasi">
                     <!-- ----------------------------- KONSULTASI ------------------------------ -->
                     <div class="konsultasi">
                         <figure>
                             <img src="./images/konsultasi-image.jpg" alt="Image 1" />
                         </figure>
                         <div class="konsultasi-items">
-                            <div class="card">
+                            <article class="card">
                                 <h3>Jadwal</h3>
                                 <p>
                                     Lokasi Zero menyediakan jadwal konsultasi yang memprioritaskan kenyamanan Anda.
                                     Request jadwal konsultasi Anda sekarang! <br />
                                     <br />
-                                    <a class="button button-solid" href="">Jadwal Konsultasi</a>
+                                    <a class="button button-solid" href="#">Jadwal Konsultasi</a>
                                 </p>
-                            </div>
+                            </article>
                         </div>
                     </div>
+                </div>
+                <div class="container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.854047298148!2d116.86707087350044!3d-1.2597078355945726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df14719aa5f4e81%3A0xa47a803131f79abe!2sMulia%20University!5e0!3m2!1sen!2sid!4v1701404271597!5m2!1sen!2sid"
+                        width="100%"
+                        height="500"
+                        style="border: 0; pointer-events: none"
+                        frameborder="0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        gestureHandling="none"
+                    ></iframe>
                 </div>
             </main>
             <!-- ------------------------------- FOOTER -------------------------------- -->
@@ -110,6 +195,9 @@
                         <a href="">LinkedIn</a>
                         <a href="">Instagram</a>
                         <a href="">Twitter</a>
+                    </div>
+                    <div>
+                        <button class="button button-solid-white" id="toggleButton">Toggle Mode</button>
                     </div>
                     <p>Copyrigth © 2023 Lokasi Zero. All rights reserved. <br /></p>
                 </div>
